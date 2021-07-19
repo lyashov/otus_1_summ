@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <p>Start...</p>
+
+    <script>
+       function sum() {
+           let sum = 0;
+           
+           if (typeof globalSum === 'undefined'){
+               globalSum = 0;
+           }
+
+           for (let i = 0; i < arguments.length; i++) {
+                sum = sum + arguments[i];
+            }
+
+            if (arguments.length > 0){
+                globalSum = sum;
+            } 
+
+            return globalSum;
+        }
+
+		document.write('first call: ' + sum(2, 3, 4) + " <br/>");
+		document.write('second call: ' + sum());
+    </script>
+
+    <p>Finish!</p>
+
+</body>
+
+</html>
